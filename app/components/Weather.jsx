@@ -38,7 +38,7 @@ var Weather = React.createClass({
   },
   render: function () {
     var {isLoading,location, temp, errorMessage} = this.state;
-    debugger;
+  
     function renderMessage () {
 
       if(isLoading) {
@@ -51,7 +51,7 @@ var Weather = React.createClass({
     function renderError () {
       if (typeof errorMessage === 'string') {
         return (
-          <ErrorModal/>
+          <ErrorModal message={errorMessage}/>
         )
       }
     }
